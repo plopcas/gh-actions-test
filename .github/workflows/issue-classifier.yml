@@ -11,6 +11,6 @@ jobs:
     name: Classify issue
     steps:
       - name: Classify issue
-        uses: plopcas/emoji-issue-classifier@v1.0.1
+        uses: plopcas/emoji-issue-classifier@v1.0.2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
