@@ -1,0 +1,16 @@
+# .github/workflows/issue-classifier.yml
+name: Issue classifier
+
+on:
+  issues:
+    types: [opened, edited]
+
+jobs:
+  classify:
+    runs-on: ubuntu-latest
+    name: Classify issue
+    steps:
+      - name: Classify issue
+        uses: plopcas/emoji-issue-classifier@latest
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
