@@ -1,5 +1,5 @@
 # .github/workflows/issue-classifier.yml
-name: Issue classifier
+name: 'Use Emoji Issue Classifier Action'
 
 on:
   issues:
@@ -8,9 +8,13 @@ on:
 jobs:
   classify:
     runs-on: ubuntu-latest
-    name: Classify issue
+
     steps:
-      - name: Classify issue
-        uses: plopcas/emoji-issue-classifier@v1.0.10
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Use Emoji Classifier
+      uses: plopcas/emoji-issue-classifier@v1.0.11
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+
