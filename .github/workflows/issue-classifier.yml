@@ -10,14 +10,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
-
-    - name: Debug
-      run: tree
-
     - name: Use Emoji Classifier
-      uses: plopcas/emoji-issue-classifier@v1.0.11
+      uses: plopcas/emoji-issue-classifier@v1.0.12
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
 
